@@ -1,0 +1,35 @@
+
+"""
+#crea variable nombre
+nombre = input("Ingresa tu nombre: ")
+#mostrar resultado
+print("Bienvenido " + nombre)
+#solicita edad
+edad = int(input("Ingresa tu edad: "))
+edad += 10
+#edad = edad +10
+
+print("Tu edad dentro de 10 años sera: " + str(edad))
+
+print(type(edad))
+
+"""
+n1 = 30
+n2 = 20
+
+#comparar n1 y n2
+"""
+print("n1 es igual a n2? " + str((n1 == n2)))
+print("n1 es diferente a n2? " + str((n1 != n2)))
+
+print("n1 es mayor a n2? " + str(not((n1 > n2))))
+
+"""
+
+costoHora = float(input("Ingrese el costo por hora "))
+horas = int(input("Ingrese horas trabajadas: "))
+
+pago = costoHora * horas
+print("El pago es: " + str(pago))
+
+#imc = peso / (altura  2)
