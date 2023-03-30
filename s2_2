@@ -1,0 +1,53 @@
+'''
+Crear el nombre del correo electronico, formado por la primera
+letra del nombre seguido del apellido y luego el @ nombre de la empresa. Todo debe ser en minuscula
+'''
+
+'''
+nombre = input("Ingresa tu nombre")
+apellido = input("Ingresa tu apellido")
+empresa = input("La empresa donde trabajas")
+
+email = "{0}{1}@{2}.com"
+
+print(email.format(nombre[0].lower(),apellido.lower(),empresa.lower()))
+
+
+#listas
+diasSemana = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo']
+
+print("El primer dia de la semana es: " + diasSemana[0])
+print(diasSemana)
+
+diasSemana[3] = "Juergues"
+print(diasSemana)
+
+cursos = ["Matematicas","Fisica","Lenguaje","Historia","Geografia"]
+
+for x in cursos:
+  print("Llevo el curso " + x)
+
+print("Llevo el curso " + cursos[0])
+print("Llevo el curso " + cursos[1])
+print("Llevo el curso " + cursos[2])
+print("Llevo el curso " + cursos[3])
+print("Llevo el curso " + cursos[4])
+'''
+#creando una lista vacia
+numeros = []
+
+for i in range(5):
+  numeros.append(int(input("ingresa un numero: ")))
+
+#ordenando los valores de la lista
+numeros.sort()
+
+for num in numeros:
+  print("El numero es: " + str(num))
+  
+
+
+
+
+
+
