@@ -1,0 +1,54 @@
+nombre = "Ricardo Dulanto Ramirez"
+#conocer la longitud de la variable nombre
+print(len(nombre))
+#mostrando el primer nombre
+print(nombre[0:7])
+#mostrando el segundo apellido
+print(nombre[-7:])
+#mostrando el primer apellido
+print(nombre[8:15])
+"""
+*******
+******
+*****
+****
+***
+**
+*
+
+print("*"*7)
+print("*"*6)
+print("*"*5)
+print("*"*4)
+print("*"*3)
+print("*"*2)
+print("*"*1)
+"""
+nombreAlum = "Ricardo"
+apellAlum = "Dulanto"
+nota = str(10)
+color = "rojo fuerte"
+mensaje = "\tEl alumno \{} {}\ \nobtuvo la *nota {} y le \\gusta el color {}"
+#print(apellAlum.format(nombreAlum))
+print(mensaje.format(nombreAlum.upper(),apellAlum.lower(),nota,color.title()))
+
+#lower: convertir a minusculas
+#upper: convertir a mayusculas
+
+nombre1 = input("Ingrese el texto ")
+print("la palabra " + nombre1 + " tiene " + str(len(nombre1)) + " caracteres")
+
+print(nombre1[::-1])
+
+# ejercio3
+#Ingresar una fecha en formato dd/mm/aaaa y devolver dd+1/mm+1/aaaa+10
+#ejemplo: 13/06/2023
+#resultado: 14/07/2033
+
+fecha = input("Ingrese una fecha ")
+dia = int(fecha[0:2])+1
+mes = int(fecha[3:5])+1
+anho = int(fecha[6:])+10
+
+mensaje = "La nueva fecha es {}/{}/{}"
+print(mensaje.format(dia,mes,anho))
