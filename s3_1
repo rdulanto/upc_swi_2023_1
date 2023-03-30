@@ -1,0 +1,56 @@
+'''
+Ejercicio 1:
+Evaluar la edad, si la edad es mayor e igual que 18, entonces, mayor de edad, sino menor de edad.
+
+
+edad = int(input("ingrese la edad: "))
+
+if edad >= 18:
+  print("Eres mayor de edad")
+elif edad >16:
+  print("Tienes 17")
+elif edad >13:
+  print("tienes entre 14 y 16")
+else:
+  print("Eres menor de edad")
+
+print("Aqui termino el programa")
+
+'''
+
+'''
+Ejercicio 2:
+Adivina un numero.
+Ingresa en tu programa un numero ha adivinar (39). Luego solicta ingresar un numero y comparalo con el numero ha adivinar. Si es incorrecto, evalua si el numero es mayor o menor que el original. Si no: ¡Urra!
+
+
+compararCon = "Ricardo"
+nombre = input("Ingrese un nombre: ").title().strip()
+
+if (compararCon == nombre):
+  print("Acertaste")
+else:
+  print("No acertaste")
+
+'''
+
+dia = int(input("ingrese el dia: "))
+
+match dia:
+  case 1: 
+    print("Es Lunes")
+  case 2: 
+    print("Es martes")
+  case 3: 
+    print("Es Miercoles")
+  case 4: 
+    print("Es Jueves")
+  case 5: 
+    print("Es Viernes")
+  case 6: 
+    print("Es Sabado")
+  case 7: 
+    print("Es Domingo")
+  case _:
+    print("No existe")
+
