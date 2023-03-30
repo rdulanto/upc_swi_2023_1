@@ -1,0 +1,70 @@
+'''
+base = int(input("Ingrese la base del triangulo: "))
+caracter = input("Ingrese el caracter a mostrar: ")
+
+inicio = 1
+while inicio <= base:
+  print(inicio * caracter)
+  inicio += 1
+
+#print(inicio)
+#else:
+ # print("Termino el programa")
+inicio -= 2
+while inicio >= 1:
+  print(inicio * caracter)
+  inicio -= 1
+  '''
+'''
+anho = int(input("Ingrese el año en el que nacio: "))
+
+edad = 0
+
+if anho%2 == 0:
+  anho += 1
+  edad += 1
+  
+while anho <= 2023:
+  print("En " + str(anho) + " tuviste " + str(edad) + " años.")
+  edad +=2
+  anho +=2
+
+  '''
+'''
+blackNum = 50
+intento = 1
+veces = 10
+analiza = ""
+
+while intento <= veces:
+  adivinaNum = int(input("Intento " + str(intento) +" El # es:"))
+  
+  if(adivinaNum == blackNum):
+    print("Exito Lo lograste")
+    print("Lo lograste en el intento: " + str(intento) + " \nTu puntaje es :" +str(int((1-(intento/veces))*100)) + "%")
+    break
+  else:
+    if(adivinaNum > blackNum):
+      analiza = "menor"
+    else:
+      analiza = "mayor"
+    print("no, el numero ha adivinar es: " +analiza)
+  intento += 1
+else:
+  print("Perdiste el juego, sigue intentando")
+
+'''
+
+# Usando FOR
+
+numero = int(input("Ingresa un numero: "))
+
+if numero % 2 == 0:
+  numero -= 1
+
+for i in range(1, numero+1, 2):
+  print(i, end=", ")
+print("\n")
+
+for i in range(numero, 0, -2):
+  print(i, end=", ")
