@@ -1,0 +1,7 @@
+#la variable edad almacena un valor ingresado por teclado
+edad = int(input("Ingresa tu edad "))
+
+edad = edad + 10
+
+#mostrando el resultado
+print("Dentro de 10 años tendras " + str(edad))
