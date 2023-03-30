@@ -1,0 +1,191 @@
+'''
+palabra = input("Ingrese una palabra: ")
+
+#antes de eliminar espacios
+print("La palabra " + palabra + " tiene " + str(len(palabra)) + " caracteres.")
+
+#eliminando espacios a la izquierda y derecha de la variable
+palabra = palabra.strip()
+
+print("La palabra " + palabra + " tiene " + str(len(palabra)) + " caracteres.")
+'''
+'''
+#Slicing
+texto = input("Ingrese un texto ")
+#Hola como estas
+#print(texto[::-2])
+#texto = texto.strip()
+print(texto.strip() + str(len(texto.strip())))
+
+'''
+'''
+fecha = input("Ingrese una fecha en formato dd/mm/aaaa: ")
+
+dia = int(fecha[:2]) + 1
+mes = int(fecha[3:5]) + 1 
+anho = int(fecha[6:]) + 10
+
+fechaN = "{1}/{0}/{2}"
+print(fechaN.format(dia,mes,anho))
+
+'''
+'''
+Nombre = "Ricardo "
+edad = 39
+email = "rdulanto@email.com"
+
+mensaje = "{} tiene {} años \ny su correo es \"{}\""
+
+#print(mensaje.format(Nombre, edad, email))
+
+print(Nombre * 30)
+'''
+"""
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+"""
+
+'''
+caracter = input("Ingrese un caracter")
+print(caracter * 7)
+print(caracter * 6)
+print(caracter * 5)
+print(caracter * 4)
+print(caracter * 3)
+print(caracter * 2)
+print(caracter * 1)
+
+'''
+
+
+'''
+nombre = input("Ingrese un nombre: ")
+apellido = input("Ingrese el apellido: ")
+empresa = input("Ingrese la empresa")
+
+email = "{}{}@{}.edu.pe"
+#upper
+#title
+nomb1 = nombre[0].lower()
+apell1 = apellido[:3].lower()
+emp1 = empresa.lower()
+
+print(email.format(nomb1,apell1,emp1))
+
+'''
+
+'''
+#*********LISTAS************
+
+personas = ["Ricardo","Jose","Paola","Perla","Lucia","Carmen"]
+
+print(personas)
+print(personas[1])
+
+#reemplazando un valor de un elemento de la lista
+personas[1] = "Pepe"
+
+print(personas)
+print(personas[1])
+
+#loops
+cant = 0
+for per in personas:
+  cant +=1
+  print("La persona " + str(cant) + " se llama " + per)
+  if per == "Paola":
+    print("Urra!!! encontramos a Paola")
+
+
+personas.append("Jaime")
+print(personas)
+
+personas.insert(1,"Susana")
+print(personas)
+
+personas.pop()
+print(personas)
+personas.pop(2)
+print(personas)
+
+#creando una copia de la lista peronas en personas2
+personas2 = list(personas)
+
+print(personas2)
+
+#borrar los elementos de la lista personas
+print("################")
+personas.clear()
+print(personas)
+#eliminando la lista personas
+del personas
+print(personas2)
+
+#creo una copia
+personas = personas2.copy()
+
+personas3 = personas + personas2
+
+personas3.append("Ricardo")
+print(personas3.count("Ricardo"))
+
+
+numeros = [2,3,56,78,4]
+#ordena los elementos de una lista
+numeros.sort(reverse=False)
+print(numeros)
+
+'''
+'''
+misFrutas = input("Ingresa nombres de frutas:(separados por comas ")
+
+frutas = []
+
+frutas = misFrutas.split(",")
+
+for x in frutas:
+  print("La fruta es " + x)
+
+'''
+
+cant = int(input("Ingresa la cantidad de numeros "))
+
+numeros = []
+
+for x in range(cant):
+  numeros.append(int(input("Ingresa el numero " + str(x+1) + ": ")))
+
+numeros.sort(reverse=True)
+
+for num in numeros:
+  print(num)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
