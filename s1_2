@@ -1,0 +1,43 @@
+"""
+
+#variable que recibe un noimbre y blo pinta en la pantalla
+#nombre = "Ricardo"
+nombre = input("Ingresa tu nombre: ")
+print("hola "+ nombre)
+edad = int(input("Ingresa tu edad: "))
+#edad = edad + 10
+edad += 10
+edad1 = str(edad)
+print("tu edad en 10 años sera: " + edad1)
+
+print(type(edad1))
+"""
+
+# Ejercicios de operadores
+
+num1 = 45
+num2 = 5
+
+print("La suma: " + str(num1 + num2))
+print("La resta: " + str(num1 - num2))
+print("La multiplicacion: " + str(num1 * num2))
+print("La division: " + str(round(num1 / num2,2)))
+print("El modulo: " + str(num1 % num2))
+print("La division entera: " + str(num1 // num2))
+
+print("num1 es igual a num2? " + str(num1 == num2))
+print("num1 es diferente a num2? " + str(num1 != num2))
+print("num1 es mayor a num2? " + str(num1 > num2))
+
+
+
+
+
+
+
+
+
+
+
+
+
