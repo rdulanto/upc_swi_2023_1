@@ -1,0 +1,83 @@
+#****MATRICES*******
+# Alumno:
+# Pregunta1:
+# Datos de inicio (inputs)
+# Output
+# Objetivo del programa
+'''
+notas = [[1,2,3],[8,7,4],[4,1,6],[9,4,2]]
+
+notas2 = [[0,0,0],[0,0,0],[0,0,0]]
+
+print(len(notas))
+print(notas[1])
+print(notas[1][2])
+
+#Lee las filas
+for x in range(4):
+  #Lee las columnas
+  for y in range(3): 
+    print(notas[x][y])
+
+
+#Lee las filas
+for x in range(3):
+  #Lee las columnas
+  for y in range(3): 
+    notas2[x][y]=int(input("ingrese un numero "))
+
+print(notas2)
+
+'''
+
+# matriz de cursos y sus notas
+# hallar prom de notas x curso
+# Hallar mayor / menor notas por curso
+
+notas3 = [[0,0,0],[0,0,0],[0,0,0]]
+sumaNotaC1 = 0
+sumaNotaC2 = 0
+sumaNotaC3 = 0
+
+mayorC1 = 0
+mayorC2 = 0
+mayorC3 = 0
+
+menorC1 = 0
+menorC2 = 0
+menorC3 = 0
+
+for i in range(len(notas3)):
+  for j in range(len(notas3)):
+    #registrando valores
+      notas3[i][j]= int(input("Ingresa nota "+str(j+1) + " de curso " + str(i+1) + " " ))
+      if (j == 0):
+        sumaNotaC1 += notas3[i][j]
+        if (mayorC1<notas3[i][j]):
+          mayorC1 = notas3[i][j]
+        if (menorC1>notas3[i][j]):
+          menorC1 = notas3[i][j]
+      if (j == 1):
+        sumaNotaC2 += notas3[i][j]
+        if (mayorC2<notas3[i][j]):
+          mayorC2 = notas3[i][j]
+        if (menorC2>notas3[i][j]):
+          menorC2 = notas3[i][j]
+      if (j == 2):
+        sumaNotaC3 += notas3[i][j] 
+        if (mayorC3<notas3[i][j]):
+          mayorC1 = notas3[i][j]
+        if (menorC3>notas3[i][j]):
+          menorC1 = notas3[i][j]
+
+  promNotasC1 = sumaNotaC1/len(notas3)
+  promNotasC2 = sumaNotaC2/len(notas3)
+  promNotasC3 = sumaNotaC3/len(notas3)
+
+  print("El promedio del curso 1 es: " + str(promNotasC1))
+  print("El promedio del curso 2 es: " + str(promNotasC2))
+  print("El promedio del curso 3 es: " + str(promNotasC3))
+
+  print("La mayor nota del curso 1 es: " + str(mayorC1))
+  print("La mayor nota del curso 2 es: " + str(mayorC2))
+  print("La mayor nota del curso 3 es: " + str(mayorC3))
