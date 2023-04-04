@@ -1,0 +1,68 @@
+miTupla = (5,6,4,7,4,2,1,4,3,7,8,4,6,2)
+
+miNumero = int(input("Ingresa un numero: "))
+
+#Primera forma
+contador = 0
+
+for x in miTupla:
+  if miNumero == x:
+    contador += 1
+
+print("El numero " + str(miNumero) + " se repite " + str(contador) + " veces.")
+
+#Segunda forma
+
+print("El numero " + str(miNumero) + " se repite " + str(miTupla.count(miNumero)) + " veces (en forma mas sencilla")
+#Obtener el valor maximo y minimo
+
+#Primera forma
+mayor = miTupla[0]
+menor = miTupla[0]
+
+for y in miTupla:
+  if y > mayor:
+    mayor = y
+  if y < menor:
+    menor = y
+
+print ("El numero mayor es: " + str(mayor))
+print ("El numero menor es: " + str(menor))
+
+print(type(miTupla))
+
+# Segunda fomra
+print ("El numero mayor es: " + str(max(miTupla)))
+print ("El numero menor es: " + str(min(miTupla)))
+
+#miTupla[0] = 8
+
+miLista = list(miTupla)
+miLista[0] = 8
+miTupla = tuple(miLista)
+print(miTupla)
+print(type(miTupla))
+
+#==============================
+#$$$$$ CONJUNTOS $$$$$$$$$$$$
+#==============================
+conjuntos = {0,2,4,6,8}
+conjuntos2 = {1,3,5,9,2,4}
+otroConjunto = set()
+un3erConjunto = set()
+
+for i in conjuntos:
+  otroConjunto.add(i ** 2)
+
+print(conjuntos)
+print(otroConjunto)
+
+for a in conjuntos2:
+  if a in conjuntos:
+    un3erConjunto.add(a)
+
+print(un3erConjunto)
+    
+                
+
+    
