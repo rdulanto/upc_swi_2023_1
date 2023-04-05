@@ -1,0 +1,128 @@
+'''
+
+vehiculo1 = {
+  "marca":"Toyota",
+  "modelo":"RAV4",
+  "año":"2021"
+}
+
+vehiculo2 = {
+  "marca":"Mazda",
+  "modelo":"CX5",
+  "año":"2020"
+}
+
+vehiculo3 = {
+  "marca":"Honda",
+  "modelo":"CRV",
+  "año":"2019"
+}
+
+vehiculos ={
+  "vehiculo1": vehiculo1,
+  "vehiculo2": vehiculo2,
+  "vehiculo3": vehiculo3
+}
+
+#print(vehiculos)
+#print(vehiculos["vehiculo1"])
+
+for x,y in vehiculos.items():
+  print(x,y)
+
+'''
+#Diccionario persona
+#claves: nombre, edad, direccion, telefono, email
+
+#diccionario padre personas
+
+#Ricardo tiene 39 años vive en Lima, su numero de telefono es 9999999999 y su email es rdulanto@email.com
+'''
+persona1 = {
+  "nombre":"Ricardo",
+  "edad":"39",
+  "direccion":"Lima",
+  "telefono":"999999999",
+  "email":"rdulanto@email.com"
+}
+
+persona2 = {
+  "nombre":"Juan",
+  "edad":"45",
+  "direccion":"Lima",
+  "telefono":"999999999",
+  "email":"juan@email.com"
+}
+
+persona3 = {
+  "nombre":"Alberto",
+  "edad":"48",
+  "direccion":"Lima",
+  "telefono":"999999999",
+  "email":"alberto@email.com"
+}
+
+persona4 = {
+  "nombre":"Susana",
+  "edad":"41",
+  "direccion":"Lima",
+  "telefono":"999999999",
+  "email":"susana@email.com"
+}
+
+persona5 = {
+  "nombre":"Paola",
+  "edad":"37",
+  "direccion":"Lima",
+  "telefono":"999999999",
+  "email":"paola@email.com"
+}
+
+personas = {
+  "persona1":persona1,
+  "persona2":persona2,
+  "persona3":persona3,
+  "persona4":persona4,
+  "persona5":persona5
+}
+
+for x in personas:
+  for y, z in personas[x].items():
+    if y == "nombre":
+      nombre = z
+    if y == "edad":
+      edad = z
+    if y == "direccion":
+      direccion = z
+    if y == "telefono":
+      telefono = z
+    if y == "email":
+      email = z
+  print(nombre + " tiene "+ edad + " años, vive en " + direccion + " su telefono es " + telefono + " y su email es " + email + "\n\n")
+    
+'''
+'''
+Diccionario de libros:
+libro1: "Ciencias"
+libro2: "Matematicas"
+libro3: "Lengua"
+libro4: "Historia"
+
+
+ingrese un libro a buscar
+
+la categoria del libro1 es Ciencias
+
+'''
+
+Libros = {
+  "libro1":"Ciencias",
+  "libro2":"Matematicas",
+  "libro3":"Lengua",
+  "libro4":"Historia"
+}
+
+libro = input("Ingrese un libro a buscar: ")
+
+if libro in Libros:
+  print("La categoria del libro " + libro + " es "+ Libros[libro])
