@@ -1,0 +1,63 @@
+'''
+Ejercicio1
+
+Diccionario para almacenar cursos:
+Asignatura: "Matematica"
+NumMatriculados: 20
+CantAprob: 1
+NomProfesor: "Ricardo Dulanto"
+
+
+cursos1 = {
+  "NomAsignatura":"SWI",
+  "NumMatriculados":20,
+  "CantAprob": 1,
+  "NomProfesor": "Ricardo Dulanto"
+}
+
+print(type(cursos1))
+print(cursos1)
+
+#imprimir las claves del diccionario
+for x in cursos1:
+  print(x)
+
+#imprimir los valores
+for x in cursos1:
+  print(cursos1[x])
+
+print("Otra forma de imprimir valores")
+for x in cursos1.values():
+  print(x)
+
+#Obteniendo las claves como los valores
+for a,b in cursos1.items():
+  print("El item " + str(a) + " su valor es " + str(b) + "\n")
+
+#buscar si la clave existe en el diccionario y obtener su valor
+
+buscar = input("que clave deseas buscar? ")
+
+if buscar in cursos1:
+  print("El valor de " + buscar + " es " + cursos1[buscar])
+else:
+  print("clave no encontrada")
+'''
+'''
+Ejercicio 2
+
+diccionario Productos
+prod1:230
+prod2:430
+'''
+
+productos = {
+  "prod1":5320,
+  "prod2":2523,
+  "prod3":6363
+}
+
+buscarProd = input("Que producto deseas buscar? ")
+
+if buscarProd in productos:
+  print("El producto " + buscarProd + " tiene un valor de " + str(productos[buscarProd]) + " tiene un 20% de desc :" + str(productos[buscarProd]*0.2) )
