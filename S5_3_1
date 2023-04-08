@@ -1,0 +1,111 @@
+'''
+miTupla = (12,"Rojo",12.5)
+#imprimir el tipo de objeto
+print(type(miTupla))
+print(miTupla)
+
+for x in miTupla:
+  print("El elemento " + str((miTupla.index(x)+1)) + " es " + str(x))
+
+#Modificando un valor de la tupla
+
+#miTupla[0] = 10 #NO VALIDO
+
+#------------
+print("convirtiendo a lista")
+miTupla = list(miTupla)
+print(type(miTupla))
+print("fin de conversion")
+#------------
+
+miLista = list(miTupla)
+print(miLista)
+print(type(miLista))
+miLista[0] = 10
+print(miLista)
+print(type(miLista))
+miTupla = tuple(miLista)
+print(miTupla)
+print(type(miTupla))
+
+
+
+#funcion count
+otraTupla = (1,2,4,5,1,2,6,7,8,1)
+#contar = otraTupla.count(1)
+#print(str(contar))
+
+contador = 0
+
+for z in otraTupla:
+  if z == 1:
+    contador += 1
+
+print("El valor 1, se repite " + str(contador) + " veces.")
+'''
+'''
+  El programa debe permitir ingresar 5 numeros, almacenarlos en una tupla
+  determinar cual es el mayor
+  cual es el menor
+
+
+#solucion larga
+mi2daLista = []
+
+for n in range(5):
+  mi2daLista.append( int(input("Ingrese un numero: ")))
+
+#print(mi2daLista)
+mi2daTupla = tuple(mi2daLista)
+print(type(mi2daTupla))
+print(mi2daTupla)
+
+menor = mayor = mi2daTupla[0]
+
+for m in mi2daTupla:
+  #pregunto por el menor
+  if m < menor:
+    menor = m
+  if m > mayor:
+    mayor = m
+
+
+print("El menor es: " + str(min(mi2daTupla)))
+print("El mayor es: "+ str(max(mi2daTupla)))
+
+'''
+
+
+#=========================
+# CONJUNTOS O SETS
+#=========================
+
+miSet = {1,4,6,87,6,3,2,1,0,90}
+print(type(miSet))
+print(miSet)
+#print(miSet[0])
+
+#agrega un elemento
+miSet.add(55)
+
+#agrega mas de un elemento
+miSet.update([22,33,44,66,77])
+
+for x in miSet:
+  print(x)
+
+miSet2 = {11,23,34,56,78,98}
+
+miSet3 = miSet.union(miSet2)
+print(miSet3)
+
+
+##Borrando elemento del conjunto
+#miSet.clear()
+#print(miSet)
+
+#del miSet2
+#print(miSet2)
+
+miSet4 = miSet.difference(miSet2)
+print(miSet4)
