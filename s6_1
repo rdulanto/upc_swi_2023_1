@@ -1,0 +1,31 @@
+'''
+  Ingresar N productos en un diccionario y sus montos
+'''
+
+continuo = True
+cant = 0
+productos = {}
+
+
+while (continuo):
+  
+  cant += 1
+  monto = float(input("Ingresa el monto del producto " + str(cant) + ": "))
+  valor = "prod" + str(cant)
+  productos.update({valor:monto})
+
+  otro = input("¿Deseas agregar mas productos?(si/no)")
+
+  if(otro=="no"):
+    continuo = False
+  
+montoT = 0
+
+for x,y  in productos.items():
+  montoT = montoT + y
+  print("El producto " + x + " su monto es " + str(y))
+
+print("El total de productos es: " + str(cant))
+print("El monto promedio es: {:.2f}".format(montoT/cant))
+  
+
