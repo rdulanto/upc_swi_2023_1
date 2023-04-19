@@ -40,7 +40,7 @@ while(flag):
   1 * 2
 
 '''
-
+'''
 def factorial(n):
   resultado = 1
 
@@ -69,3 +69,34 @@ while (flag):
   
   else:
     flag = False
+
+'''
+
+# Ejercicio 3
+
+def titulo(cadena):
+  palabras = cadena.split(" ")
+
+  resultCadena = []
+
+  for palabra in palabras:
+    if len(palabra) > 0:
+      result = palabra[0].upper() + palabra[1:].lower()
+      resultCadena.append(result)
+    else:
+      resultCadena.append(palabra)
+
+  return " ".join(resultCadena)
+
+
+flag = True
+while (flag):
+  try:
+    p = input("ingrese un texto: ")
+    print(titulo(p))
+  except:
+    print("Hubo un error")
+  
+  else:
+    flag = False
+    
