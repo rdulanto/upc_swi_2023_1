@@ -1,0 +1,71 @@
+'''
+def primeros_N_Cuadrados(n):
+
+  l = []
+  x=1
+  contador = 0
+  #for x in range(n+1):
+  while (contador<n):
+    #print (x)
+    if (x%2 == 1):
+      l.append(x**2)
+      contador += 1
+    x+=1
+
+  return l
+
+flag = True
+
+while(flag):
+  try:
+    num = int(input("Ingrese un valor "))
+
+    #print(primeros_N_Cuadrados(num))
+    
+    for x in primeros_N_Cuadrados(num):
+      print("El numero es: " + str(x))
+  
+  except: 
+    print("Hubo un error")
+  else:
+    flag = False
+
+    '''
+
+'''
+  factorial de 4
+  4! = 1 * 2 * 3 * 4
+  3! * 4
+  2! * 3
+  1 * 2
+
+'''
+
+def factorial(n):
+  resultado = 1
+
+  for i  in range(1, n +1):
+    resultado *= i
+  
+  return resultado
+
+#n y m
+#(n! / (m!*(n-m)!))
+
+flag = True
+while (flag):
+  try:
+    n = int(input("Ingrese un numero "))
+    m = int(input("Ingrese otro numero "))
+
+    res = factorial(n) / (factorial(m)*factorial(n-m))
+
+    print("El factorial de n es " + str(factorial(n)))
+    print("El factorial de m es " + str(factorial(m)))
+    print("El resultado final es: " + str(res))
+  
+  except:
+    print("Hubo un error")
+  
+  else:
+    flag = False
