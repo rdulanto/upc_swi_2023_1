@@ -1,0 +1,91 @@
+import datetime as dt
+import pytz as tzu
+import math as m
+import random as r
+'''
+
+
+utc = dt.datetime.now(tz=tzu.utcy)
+print("La hora actual en UTC es ", utc)
+
+
+lima_tz = tzu.timezone('America/Lima')
+lima_now = dt.datetime.now(lima_tz) #tz= time Zone
+
+#fecha = dt.datetime.now()
+#mostrar la fecha y hora actual
+print(lima_now)
+
+#Obtener la fecha actual
+lima_fecha = dt.date.today()
+print(lima_fecha)
+
+dia = int(input("Ingresa el dia"))
+mes = int(input("Ingresa el mes"))
+anho = int(input("Ingresa el anho"))
+
+mi_fecha = dt.date(anho,mes,dia)
+print("La nueva fecha es " , mi_fecha)
+print(type(mi_fecha))
+
+#mostrar solo la hora
+lima_hora = dt.datetime.now().time()
+print(lima_hora)
+print(type(lima_hora))
+
+#Alterar la fecha
+nueva_fecha = lima_fecha + dt.timedelta(days=-7)
+print("La nueva fecha es ", nueva_fecha)
+
+
+mi_fecha = mi fecha de nacimiento
+lima_fecha = fecha de hoy
+
+
+edad = (lima_fecha - mi_fecha).days // 365
+
+print("tu edad es ", edad)
+
+#Formatear una fecha como si fuera una cadena de texto
+
+mi_n_fecha = mi_fecha.strftime("%m")
+print(mi_n_fecha)
+
+
+'''
+# MODULO MATH
+
+num1 = min(2,4,5,8,1)
+print(num1)
+
+num2 = max(2,4,5,8,1)
+print(num2)
+
+raiz = m.sqrt(25)
+print(raiz)
+
+res = m.pow(2,3)
+print(res)
+
+factorial = m.factorial(4)
+print(factorial)
+
+numero = 2.78345678456
+print(round(numero,2))
+
+print(m.ceil(numero))
+print(m.floor(numero))
+
+print(m.sin(m.pi/2))
+
+#Generar un numero aleatorio en 0 y 100
+random = r.randint(10,100)
+print(random)
+
+
+ran = round(r.uniform(0.0,1.0),2)
+print(ran)
+
+grupos = ['grupo1','grupo2','grupo3']
+random_group = r.choice(grupos)
+print(random_group)
