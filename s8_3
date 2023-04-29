@@ -1,0 +1,114 @@
+import datetime as dt #libreria datetime y su alias es dt
+import pytz as tzu #timezone
+import math as m
+import random as r
+
+'''
+#Almacena dentro de la variable fecha, la fecha y hora actual
+fecha = dt.datetime.now()
+print(type(fecha))
+print(fecha)
+
+print("La zona horaria es: ", fecha.strftime("%Z"))
+
+lima_tz = tzu.timezone('America/New_York')
+print(lima_tz)
+lima_now = dt.datetime.now(lima_tz)
+print(lima_now)
+
+'''
+#De un formato con valores enteros, convertirlos a formato fecha
+'''
+
+dia = int(input("Ingrese el dia: "))
+mes = int(input("Ingrese el mes: "))
+anho = int(input("Ingrese el anho: "))
+
+#Construir una fecha apartir del dia, mes y anho
+mi_fecha = dt.date(anho, mes, dia)
+print("La fecha es ", mi_fecha)
+print(type(mi_fecha))
+
+#Contruir la variable nueva_fecha que tiene el resultado de sumar o restar dias
+nueva_fecha = mi_fecha + dt.timedelta(days=-7)
+print(nueva_fecha)
+
+fecha_hoy = dt.date.today()
+
+#Calcula la edad (aproximada)
+edad = (fecha_hoy - mi_fecha).days //365
+print("Mi edad es ", edad)
+
+dia_semana = mi_fecha.strftime("%A")
+print("El dia de la semana es: ", dia_semana)
+
+'''
+
+#Modulo Math
+num1 = min(9,5,7,6,18,1,3,4)
+print(num1)
+
+num2 = max(9,5,7,6,18,1,3,4)
+print(num2)
+
+res = m.pow(9,1/2)
+print(res)
+
+raiz = m.sqrt(49)
+print(raiz)
+
+
+#3.1415
+pi = m.pi
+print(pi)
+print(round(pi, 4))
+print(m.ceil(pi))
+print(m.floor(pi))
+
+factorial = m.factorial(4)
+print(factorial)
+
+#Numeros aleatorios
+#Generar un numero aleatorio entre 1 y 100
+random = r.randint(10,100)
+print(random)
+
+random2 = round(r.uniform(0.0,1.0),2)
+print(random2)
+
+
+random3 = r.randrange(2,20,2)
+print(random3)
+'''
+#Piensa en un numero, el numero es mayor, el numero es menor y acertaste, cantidad de intentos
+'''
+
+
+print("Estoy pensando en un numero entre 1 y 50, adivina cual es")
+numero_p = r.randint(1,50)
+#print(numero_p)
+
+num = int(input("Ingresa un numero: "))
+flag = True
+contador = 0
+while (flag):
+  if numero_p > num:
+    print("Estoy pensando en un numero mayor")
+    num = int(input("Ingresa un numero: "))
+    contador +=1
+  elif (numero_p < num):
+    print("Estoy pensando en un numero menor")
+    num = int(input("Ingresa un numero: "))
+    contador +=1
+  else:
+    print("Acertaste!")
+    contador +=1
+    flag = False
+
+
+print("numero de intentos: ", contador)
+    
+  
+
+
+
