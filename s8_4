@@ -1,0 +1,104 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import csv
+
+'''
+x = (2,4,6,8,10,12,14,16,18,20)
+y = (1,3,5,7,9,11,13,15,17,19)
+
+plt.plot(x,y)
+plt.title("Gráfico lineal")
+plt.xlabel("Eje x")
+plt.ylabel("Eje y")
+plt.xlim(0,20)
+plt.xticks(range(0,20))
+plt.ylim(1,19)
+plt.yticks(range(0,20))
+plt.show()
+
+'''
+
+'''
+def misNotas(notas, miColor):
+  fig, ax = plt.subplots()
+  ax.bar(notas.keys(), notas.values(),color = miColor)
+  return ax
+
+notitas = {
+  'Programacion':16,
+  'Matematicas':15,
+  'Diseño':18,
+  'Algortimos':14,
+  'SWI':11
+}
+misNotas(notitas,'blue')
+plt.show
+'''
+'''
+#Diagrama de pie
+zonas = ["Este","Sur","Norte","Oeste"]
+ventas = [300,250,200,150]
+
+plt.pie(ventas, labels= zonas, autopct='%1.1f%%')
+plt.show()
+'''
+
+
+'''
+def grafNotas(misNotas):
+  fig,ax = plt.subplots()
+  misNotas.plot(kind='box', ax= ax)
+  plt.title('Distribución de notas')
+  return ax
+
+notas = [12,15,18,14,19,16,13,11,10,17,15,18]
+#print(notas)
+snotas = pd.Series(notas)
+#print(snotas)
+grafNotas(snotas)
+plt.show()
+
+'''
+
+'''
+def graficaCSV(datos):
+  fig, ax = plt.subplots()
+  datos.groupby('Zona').plot(x='Zona',y='Venta',ax=ax)
+  plt.title('Grafico de Ventas por Zonas')
+  return ax
+
+
+df_datos = pd.read_csv("ventas.csv")
+graficaCSV(df_datos)
+plt.show()
+#print(df_datos)
+
+'''
+
+#listas para almacenar los datos
+meses = []
+ventas = []
+objetivos = []
+productividades = []
+
+#leer archivo csv misVentas
+with open('misVentas.csv',newline='') as archivo:
+  lector_csv= csv.reader(archivo,delimiter=',')
+  siguiente_linea = next(lector_csv)
+
+  #procesar las filas del archivo csv
+  for fila in lector_csv:
+    mes = fila[0]
+    venta = int(fila[1])
+    objetivo = int(fila[2])
+
+    #Calcular la productividad de ventas
+    productividad = venta/objetivo*100
+
+    meses.append(mes)
+    ventas.append(venta)
+    productividades.append(productividad)
+
+plt.bar(meses,productividades)
+plt.show()
+    
